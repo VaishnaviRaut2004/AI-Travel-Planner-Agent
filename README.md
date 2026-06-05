@@ -1,100 +1,207 @@
-# AI Travel Planner Agent ✈️🌎
+# AI Travel Planner Agent ✈️🌍
 
-![IBM watsonx.ai](https://img.shields.io/badge/IBM-watsonx.ai-blue?style=for-the-badge&logo=ibm)
-![IBM Cloud Lite](https://img.shields.io/badge/IBM-Cloud%_Lite-052FAD?style=for-the-badge&logo=ibm)
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![IBM watsonx.ai](https://img.shields.io/badge/IBM-watsonx.ai-blue)
+![IBM Cloud Lite](https://img.shields.io/badge/IBM-Cloud%20Lite-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![React](https://img.shields.io/badge/React-Frontend-61DAFB)
+![Python](https://img.shields.io/badge/Python-3.11-yellow)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-UI-38BDF8)
 
-> "AI Travel Planner Agent is a multi-agent travel assistant powered by IBM watsonx.ai and Meta Llama 3.3 70B Instruct. The system generates personalized itineraries, budget analysis, travel recommendations, safety alerts, booking suggestions, and destination insights through an intelligent agent orchestration architecture."
+## Overview
 
-## Project Overview
+AI Travel Planner Agent is an intelligent travel planning platform built using **IBM Cloud Lite** and **IBM watsonx.ai**.
 
-This project was built to deliver a highly robust, production-ready travel planning platform. It leverages a powerful **10-Agent Architecture** running on the IBM Cloud Lite tier to dynamically generate nuanced travel plans tailored to user preferences. 
+The application helps travelers generate personalized travel plans, optimize budgets, discover attractions, receive travel recommendations, and create complete itineraries using AI-powered multi-agent orchestration.
 
-## Features
-- **Intelligent 10-Agent System**: Agents specialize in distinct travel domains (Budget, Safety, Weather, etc.) to ensure high-quality output.
-- **Premium Glassmorphism Dashboard**: A modern, 12-card dashboard featuring skeleton loading animations and IBM-inspired teal/blue gradients.
-- **Intelligent Demo Mode**: If API keys (like Google Maps or OpenWeather) are missing, the system gracefully falls back to highly realistic mock components (e.g., animated CSS Map placeholders and mock weather context) so hackathon judging is never interrupted.
-- **Context-Aware Recommendations**: Weather directly influences the LLM's generated itinerary (e.g. recommending indoor activities during thunderstorms).
+The system analyzes:
 
-## Architecture Diagram
+* Destination Preferences
+* Budget Constraints
+* Travel Dates
+* Number of Travelers
+* Travel Interests
+* Travel Style
 
-```mermaid
-graph TD
-    User[User UI] -->|Travel Preferences| React[React Frontend]
-    React -->|API Request| FastAPI[FastAPI Backend]
-    
-    FastAPI --> Orch[Multi-Agent Orchestrator]
-    
-    Orch -->|Fetch Context| Weather[Weather Agent API/Mock]
-    Weather --> Orch
-    
-    Orch -->|Concurrent Prompts| Llama[IBM watsonx.ai\nmeta-llama/llama-3-3-70b-instruct]
-    
-    subgraph Multi-Agent Architecture
-        Llama --> A1[Destination Agent]
-        Llama --> A2[Budget Agent]
-        Llama --> A3[Itinerary Agent]
-        Llama --> A4[Booking Agent]
-        Llama --> A5[Travel Tips Agent]
-        Llama --> A6[Alert Agent]
-        Llama --> A7[Local Guide Agent]
-        Llama --> A8[Schedule Optimization Agent]
-    end
-    
-    Multi-Agent Architecture -->|Structured JSON| Orch
-    Orch -->|Aggregate| FastAPI
-    FastAPI -->|Display Dashboard| React
-```
+and generates a complete travel experience within seconds.
 
-## IBM watsonx.ai Integration & IBM Cloud Lite Usage
-This platform exclusively utilizes `meta-llama/llama-3-3-70b-instruct` via the IBM watsonx.ai SDK. To accommodate the rate limits of the **IBM Cloud Lite** tier, the backend `orchestrator.py` intelligently groups the 9 LLM logical agents into fewer physical API calls. The prompts strictly enforce structured JSON outputs to feed the React frontend dynamically.
+---
 
-## Setup Instructions & Local Development Steps
+## Key Features
 
-### 1. Clone the Repository
+### Personalized Travel Planning
+
+Generate customized travel plans based on user preferences.
+
+### Multi-Agent AI Architecture
+
+Specialized AI agents collaborate to create high-quality recommendations.
+
+### Budget Optimization
+
+Estimate transportation, accommodation, food, and miscellaneous expenses.
+
+### Smart Itinerary Generation
+
+Generate detailed day-wise travel schedules.
+
+### Hotel & Transport Recommendations
+
+Suggest accommodation and transportation options.
+
+### Travel Safety Guidance
+
+Provide safety tips, alerts, and emergency information.
+
+### Demo Mode Support
+
+Works even without external API keys by generating realistic travel data.
+
+### Premium Dashboard
+
+Modern React dashboard with:
+
+* Glassmorphism UI
+* Responsive Design
+* Interactive Cards
+* Loading Animations
+
+---
+
+## Technology Stack
+
+### Frontend
+
+* React.js
+* Vite
+* Tailwind CSS
+
+### Backend
+
+* FastAPI
+* Python
+
+### AI Platform
+
+* IBM watsonx.ai
+
+### Cloud Services
+
+* IBM Cloud Lite
+* IBM Cloud Object Storage
+
+---
+
+---
+
+## Multi-Agent Architecture
+
+The system consists of the following agents:
+
+| Agent                       | Responsibility                          |
+| --------------------------- | --------------------------------------- |
+| Destination Agent           | Recommends destinations and attractions |
+| Budget Agent                | Calculates travel expenses              |
+| Itinerary Agent             | Generates day-wise schedules            |
+| Booking Agent               | Suggests hotels and transportation      |
+| Travel Tips Agent           | Provides travel recommendations         |
+| Alert Agent                 | Generates travel alerts                 |
+| Local Guide Agent           | Recommends local experiences            |
+| Weather Agent               | Provides weather context                |
+| Schedule Optimization Agent | Improves travel efficiency              |
+| Orchestrator Agent          | Combines all outputs                    |
+
+---
+
+## IBM watsonx.ai Integration
+
+IBM watsonx.ai serves as the core AI engine for:
+
+* Travel Recommendation Generation
+* Itinerary Planning
+* Budget Analysis
+* Travel Safety Guidance
+* Destination Discovery
+
+The platform uses IBM foundation models through watsonx.ai APIs to generate intelligent travel recommendations.
+
+---
+
+## Demo Mode
+
+If external APIs are unavailable:
+
+* Mock Weather Data
+* Mock Travel Alerts
+* Mock Maps
+* Demo Hotel Recommendations
+* Demo Transportation Suggestions
+
+are automatically generated.
+
+This ensures uninterrupted demonstrations during hackathons and presentations.
+
+---
+
+## Setup Instructions
+
+### Clone Repository
+
 ```bash
-git clone https://github.com/your-username/travel-planner-agent.git
-cd travel-planner-agent
+git clone https://github.com/VaishnaviRaut2004/AI-Travel-Planner-Agent.git
+cd AI-Travel-Planner-Agent
 ```
 
-### 2. Environment Configuration
-Copy the `.env.example` file and configure it:
-```bash
-cp .env.example .env
-```
-Fill in your IBM credentials:
+### Configure Environment Variables
+
+Create a `.env` file:
+
 ```env
-IBM_API_KEY=your_ibm_api_key_here
-IBM_PROJECT_ID=your_ibm_project_id_here
-IBM_URL=https://au-syd.ml.cloud.ibm.com
+IBM_API_KEY=YOUR_API_KEY
+IBM_PROJECT_ID=YOUR_PROJECT_ID
+IBM_URL=YOUR_IBM_ENDPOINT
 
-OPENWEATHER_API_KEY=your_key # Optional for Demo Mode
-GOOGLE_MAPS_API_KEY=your_key # Optional for Demo Mode
+OPENWEATHER_API_KEY=
+GOOGLE_MAPS_API_KEY=
 ```
 
-### 3. Run Backend (FastAPI)
+### Start Backend
+
 ```bash
 cd backend
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
-### 4. Run Frontend (React/Vite)
-Open a new terminal window:
+### Start Frontend
+
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-Navigate to `http://localhost:5173`.
 
-## Screenshots Section
-*(Add screenshots of your beautiful premium dashboard here prior to PPT submission!)*
+Open:
+
+```text
+http://localhost:5173
+```
+
+---
 
 ## Future Enhancements
-- Live ticket booking integration (e.g. Skyscanner, Booking.com APIs).
-- Interactive drag-and-drop map routing using advanced Google Maps features.
-- User accounts and collaborative itinerary saving functionality.
+
+* Live Flight Booking
+* Live Hotel Booking
+* Google Maps Integration
+* Real-Time Weather Tracking
+* WhatsApp Travel Assistant
+* Voice-Based Travel Planning
+* Multi-Language Support
+
+---
+
+## Conclusion
+
+AI Travel Planner Agent simplifies travel planning through intelligent automation powered by IBM watsonx.ai and IBM Cloud Lite.
+
+The platform generates personalized itineraries, travel recommendations, budget plans, and safety guidance through a scalable multi-agent architecture suitable for real-world deployment and hackathon demonstrations.
