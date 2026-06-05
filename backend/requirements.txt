@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+ibm-watsonx-ai
+python-dotenv
+requests
+pydantic
+pydantic-settings
+httpx
