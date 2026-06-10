@@ -1,17 +1,12 @@
 # AI Travel Planner Agent ✈️🌍
 
-![IBM watsonx.ai](https://img.shields.io/badge/IBM-watsonx.ai-blue)
-![IBM Cloud Lite](https://img.shields.io/badge/IBM-Cloud%20Lite-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
-![React](https://img.shields.io/badge/React-Frontend-61DAFB)
-![Python](https://img.shields.io/badge/Python-3.11-yellow)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-UI-38BDF8)
+**IBM watsonx.ai | IBM Granite Model | IBM Cloud Lite | FastAPI | React | Python | Tailwind CSS**
 
 ## Overview
 
-AI Travel Planner Agent is an intelligent travel planning platform built using **IBM Cloud Lite** and **IBM watsonx.ai**.
+AI Travel Planner Agent is an intelligent travel planning platform built using IBM Cloud Lite and IBM watsonx.ai.
 
-The application helps travelers generate personalized travel plans, optimize budgets, discover attractions, receive travel recommendations, and create complete itineraries using AI-powered multi-agent orchestration.
+The application helps travelers generate personalized travel plans, optimize budgets, discover attractions, receive travel recommendations, and create complete itineraries using AI-powered agentic orchestration.
 
 The system analyzes:
 
@@ -20,9 +15,8 @@ The system analyzes:
 * Travel Dates
 * Number of Travelers
 * Travel Interests
-* Travel Style
 
-and generates a complete travel experience within seconds.
+and generates a personalized travel experience within seconds.
 
 ---
 
@@ -32,9 +26,9 @@ and generates a complete travel experience within seconds.
 
 Generate customized travel plans based on user preferences.
 
-### Multi-Agent AI Architecture
+### Agentic AI Architecture
 
-Specialized AI agents collaborate to create high-quality recommendations.
+Specialized AI components collaborate to create high-quality travel recommendations.
 
 ### Budget Optimization
 
@@ -44,26 +38,22 @@ Estimate transportation, accommodation, food, and miscellaneous expenses.
 
 Generate detailed day-wise travel schedules.
 
-### Hotel & Transport Recommendations
+### Weather Insights
 
-Suggest accommodation and transportation options.
+Provide weather forecasts and travel-related recommendations.
 
-### Travel Safety Guidance
+### Travel Tips & Guidance
 
-Provide safety tips, alerts, and emergency information.
+Provide travel recommendations, cultural insights, and safety guidance.
 
-### Demo Mode Support
-
-Works even without external API keys by generating realistic travel data.
-
-### Premium Dashboard
+### Interactive Dashboard
 
 Modern React dashboard with:
 
-* Glassmorphism UI
 * Responsive Design
 * Interactive Cards
-* Loading Animations
+* Travel Plan Visualization
+* User-Friendly Interface
 
 ---
 
@@ -83,32 +73,24 @@ Modern React dashboard with:
 ### AI Platform
 
 * IBM watsonx.ai
+* IBM Granite Model
 
 ### Cloud Services
 
 * IBM Cloud Lite
-* IBM Cloud Object Storage
 
 ---
 
----
+## Agentic AI Components
 
-## Multi-Agent Architecture
-
-The system consists of the following agents:
-
-| Agent                       | Responsibility                          |
-| --------------------------- | --------------------------------------- |
-| Destination Agent           | Recommends destinations and attractions |
-| Budget Agent                | Calculates travel expenses              |
-| Itinerary Agent             | Generates day-wise schedules            |
-| Booking Agent               | Suggests hotels and transportation      |
-| Travel Tips Agent           | Provides travel recommendations         |
-| Alert Agent                 | Generates travel alerts                 |
-| Local Guide Agent           | Recommends local experiences            |
-| Weather Agent               | Provides weather context                |
-| Schedule Optimization Agent | Improves travel efficiency              |
-| Orchestrator Agent          | Combines all outputs                    |
+| Component           | Responsibility                                               |
+| ------------------- | ------------------------------------------------------------ |
+| Destination Agent   | Recommends destinations and attractions                      |
+| Budget Agent        | Calculates travel expenses and budget breakdown              |
+| Itinerary Agent     | Generates day-wise travel schedules                          |
+| Weather Agent       | Provides weather insights and recommendations                |
+| Travel Tips Agent   | Provides travel tips, cultural guidance, and recommendations |
+| Travel Orchestrator | Combines outputs into a personalized travel plan             |
 
 ---
 
@@ -119,10 +101,10 @@ IBM watsonx.ai serves as the core AI engine for:
 * Travel Recommendation Generation
 * Itinerary Planning
 * Budget Analysis
-* Travel Safety Guidance
+* Travel Guidance
 * Destination Discovery
 
-The platform uses IBM foundation models through watsonx.ai APIs to generate intelligent travel recommendations.
+The platform utilizes IBM Granite Models through IBM watsonx.ai to generate intelligent travel recommendations and personalized travel plans.
 
 ---
 
@@ -130,15 +112,14 @@ The platform uses IBM foundation models through watsonx.ai APIs to generate inte
 
 If external APIs are unavailable:
 
-* Mock Weather Data
-* Mock Travel Alerts
-* Mock Maps
-* Demo Hotel Recommendations
-* Demo Transportation Suggestions
+* Demo Weather Information
+* Demo Travel Recommendations
+* Demo Attractions Data
+* Demo Budget Estimates
 
 are automatically generated.
 
-This ensures uninterrupted demonstrations during hackathons and presentations.
+This ensures uninterrupted demonstrations during project presentations and evaluations.
 
 ---
 
@@ -159,9 +140,6 @@ Create a `.env` file:
 IBM_API_KEY=YOUR_API_KEY
 IBM_PROJECT_ID=YOUR_PROJECT_ID
 IBM_URL=YOUR_IBM_ENDPOINT
-
-OPENWEATHER_API_KEY=
-GOOGLE_MAPS_API_KEY=
 ```
 
 ### Start Backend
@@ -190,18 +168,19 @@ http://localhost:5173
 
 ## Future Enhancements
 
-* Live Flight Booking
-* Live Hotel Booking
-* Google Maps Integration
+* Live Flight Booking Integration
+* Live Hotel Booking Integration
 * Real-Time Weather Tracking
-* WhatsApp Travel Assistant
-* Voice-Based Travel Planning
+* Voice-Based Travel Assistant
 * Multi-Language Support
+* Smart Route Optimization
+* Mobile Application Deployment
+* Personalized Travel Recommendations Based on User History
 
 ---
 
 ## Conclusion
 
-AI Travel Planner Agent simplifies travel planning through intelligent automation powered by IBM watsonx.ai and IBM Cloud Lite.
+AI Travel Planner Agent simplifies travel planning through intelligent automation powered by IBM watsonx.ai, IBM Granite Model, and IBM Cloud Lite.
 
-The platform generates personalized itineraries, travel recommendations, budget plans, and safety guidance through a scalable multi-agent architecture suitable for real-world deployment and hackathon demonstrations.
+The platform generates personalized itineraries, travel recommendations, budget plans, weather insights, and travel guidance through an agentic AI architecture, enabling users to plan trips efficiently and make informed travel decisions.
